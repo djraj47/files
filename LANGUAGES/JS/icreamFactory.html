@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let stock = {
+        "brand": [
+            {
+                "Kwality Walls": {
+                    "flavor": [
+                        {
+                            name: "chotuchoco",
+                            price: 50
+                        },
+                        {
+                            name: ",mediumchoco",
+                            price: 150
+                        },
+                        {
+                            name: "largechoco",
+                            price: 250
+                        },
+                        {
+                            name: "ectralargechoco",
+                            price: 500
+                        }
+                    ]
+                },
+
+                "Cream Bell": {
+                    "flavor": ["vanilla", "orange", "strawberry"]
+                }
+            },
+            {
+                "Amul": {
+                    "flavor": ["milk", "candycrush", "colacandy"]
+                },
+                "drinks": ["kesarmilk", "buttermilk", "cowmilk", "desimilk"]
+            },
+        ],
+        "base": ["bowl", "stcik", "cone"],
+        "toppings": ["chocochip", "pineapple", "chery", "pista"],
+        "region": "delhi"
+    };
+    function getorder() {
+        alert("hii")
+        let name = document.getElementById("name").value;
+        let brand = document.getElementById("brand").value;
+        let base = document.getElementById("base").value;
+        let flavor = document.getElementById("flavor").value;
+        // alert("hey " + name + " Your order is conformed \n" + "brand :" + brand +"\nflavor :"+ flavor +"\n base :"+ base);
+        let isBrandAvailable = false;
+        for (let i = 0; i < stock["brand"].length; i++) {
+
+            if (brand == stock["brand"][i]) {
+                isBrandAvailable = true;
+            }
+        }
+            if (!isBrandAvailable) {
+
+                alert("------------------Please Choose Another Brand -----------------")
+            }
+    }
+
+
+</script>
+
+<body>
+    <h1>Welcome to the Ice-creamFactory</h1>
+    <form action="">
+        <label for="name">Name<span style="color: red;">*</span></label>
+        <input  type="text" id="name">
+        <label for="brand">Brand<span style="color: red;">*</span></label>
+        <input  onchange="getorder()"  type="text" id="brand">
+        <label for="base">Base<span style="color: red;">*</span></label>
+        <input  type="text" id="base">
+        <label    for="flavor">flavor<span style="color: red;">*</span></label>
+        <input type="text" id="flavor">
+
+        <input type="submit" value="Book now!">
+    </form>
+
+</body>
+
+</html>

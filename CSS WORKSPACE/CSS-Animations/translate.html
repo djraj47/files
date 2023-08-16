@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translate</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            transition: all 4s;
+            /* animation-name: animi;
+        animation-duration: 2s;*/
+
+            animation-direction: alternate;
+            position: absolute;
+            text-align: center;
+            animation-name: animation2;
+            animation-duration: 20s;
+            border: 1px solid red;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes animation2 {
+            0% {
+                transform: tr;
+                transform: translate(25%, 25%);
+
+            }
+
+            25% {
+                transform: translate(50%, 0%);
+
+            }
+
+            50% {
+                transform: translate(75%, 25%);
+
+            }
+
+            75% {
+                transform: translate(100%, 0%);
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>radhe radhe</p>
+        <p>🙏</p>
+    </div>
+</body>
+
+</html>

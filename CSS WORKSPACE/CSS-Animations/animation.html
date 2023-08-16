@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            transition: all 4s;
+            /* animation-name: animi;
+            animation-duration: 2s;*/
+    
+            animation-direction: alternate;
+            position: absolute;
+            text-align: center ;
+            animation-name: animation2;
+            animation-duration: 20s;
+            border: 1px solid red;
+            animation-iteration-count: infinite;
+        }
+/* 
+        @keyframes animi {
+            from {
+
+                top: 0px;
+                left: 0px;
+            }
+
+            to {
+                border: 1px solid red;
+                top: 400px;
+                left: 300px;
+                border-radius: 50%;
+            }
+        } */
+
+
+        @keyframes animation2 {
+            0%{
+                top: 0px;
+                left: 0px;
+                border-radius: 50%;
+                rotate: 90deg;
+                
+            }
+            25%{
+                top: 250px;
+                left: 250px;
+                border-radius: 0%;
+                rotate: 90deg;
+            }
+            50%{
+                top: 0px;
+                left: 500px;
+                border-radius: 50%;
+            }
+            75%{
+                top: 250px;
+                left: 750px;
+                border-radius: 0%;
+            }
+            100%{
+                top: 0px;
+                left: 1000px;
+                
+                border-radius: 50%;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+<img src="snake.gif" alt="">
+    </div>
+</body>
+
+</html>

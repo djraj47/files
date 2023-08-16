@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        .box {
+            background-color: aquamarine;
+            height: 300px;
+            width: 100%;
+            margin-top: 100px;
+            position: relative;
+            /* 
+            position: relative;
+            left: 100px; */
+
+        }
+
+        #ytposition {
+            position: absolute;
+            top: 100px;
+            left: 125px;
+            /* z-index: 1;  moves up/down a layer  */
+        }
+        #scenery{
+            position: absolute;
+            height: 200px ;
+            /* z-index: -1; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="icons8-youtube-48.png" id="ytposition" alt="icarimage">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, debitis!</p>
+        <img src="background.avif " id="scenery">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            position: relative;
+        }
+
+        .box:before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 0;
+            height: 0;
+            border-top: 2px solid #bd1010;
+            border-right: 2px solid #0fd858;
+            border-left: 2px solid #c8ec17;
+            border-bottom: 2px solid #160fd8;
+            animation: border 2s linear infinite;
+        }
+
+        @keyframes border {
+            0% {
+                width: 0;
+                height: 0;
+            }
+
+            25% {
+                width: 200px;
+                height: 0;
+            }
+
+            50% {
+                width: 200px;
+                height: 200px;
+            }
+
+            75% {
+                width: 0;
+                height: 200px;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+</body>
+
+</html>
